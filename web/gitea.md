@@ -1,12 +1,4 @@
-Создать пользователя и базц данных `gitea` в `mysql`:
-```
-mysql -u roor -p
-maria_db> CREATE USER `gitea`@'localhost' IDENTIFIED BY 'fj87^kjG';
-maria_db> CREATE DATABASE gitea_db;
-maria_db> GRANT ALL ON gitea_db.* TO 'gitea'@'localhost';
-maria_db> FLUSH PRIVILEGES;
-maria_db> quit;
-```
+## Gitea
 Скачать бинарный файл *gitea*, сделать его исполняемыи и поместить в каталог */usr/local/bin* (либо сделать на него символьную ссылку `ln -s gitea /usr/local/bin/gitea`)
 ```
 VERSION=1.18.3

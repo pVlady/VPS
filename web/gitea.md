@@ -51,9 +51,12 @@ firewall-cmd --reload
 ```
 Подготовка СУБД
 ```
-mysql -e 'CREATE DATABASE gitea;'
-mysql -e 'GRANT ALL ON gitea.* TO \'gitea\'@\'localhost\' IDENTIFIED BY \'MY_PASSWORD\';'
-mysql -e 'FLUSH PRIVILEGES;'
+mysql -u roor -p
+  maria_db> CREATE USER `gitea`@'localhost' IDENTIFIED BY 'fj87^kjG';
+  maria_db> CREATE DATABASE gitea_db;
+  maria_db> GRANT ALL ON gitea_db.* TO 'gitea'@'localhost';
+  maria_db> FLUSH PRIVILEGES;
+  maria_db> quit;
 ```
 Выполняем первый (ручной) запуск для установки
 ```

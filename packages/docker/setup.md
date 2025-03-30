@@ -22,3 +22,18 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 # test the result
 sudo docker run hello-world
 ```
+
+3. Create the docker group if it doesn't exists
+```bash
+sudo cat /etc/group    ; the list of all groups
+sudo groupadd docker
+```
+4. Add user to the docker group
+```bash
+ sudo usermod -aG docker $USER
+```
+5. Restart the virtual machine for changes to take effect.\
+You can also run the following command to activate the changes to groups:
+```bash
+ newgrp docker
+```
